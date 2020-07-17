@@ -1,0 +1,792 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="stylesheet" type="text/css" href="/css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://file.iqilu.com/custom/new/v2016/css/public.css" />
+	<link rel="stylesheet" type="text/css" href="/css/gloal_style.css" />
+	<link rel="stylesheet" type="text/css" href="/css/index.css" />
+	<title>中国即墨网</title>
+</head>
+
+<body>
+	<!-- logo -->
+	<div class="logo_title_down clear_float">
+		<div class="background1"></div>
+		<a href="/" class="fl">
+			<img class="logo" src="/images/icon_logo.jpg" />
+		</a>
+		<div class="download fr">
+			<div class="fl erweima_box">
+				<img class="erweima" src="/images/icon_dibu1.png" />
+			</div>
+			<div class="download_info fl">
+				<p class="download_title">扫描二维码</p>
+				<p class="download_title">下载“知即墨”APP</p>
+			</div>
+		</div>
+		<div class="fr mgt30 tianqi_contain">
+			<div class="clear_float">
+				<img src="/images/icon_tianqi.png" class="fl mgl25">
+				<div class="fl mgl10">
+					21-32 北风2-3级
+				</div>
+			</div>
+			<div class="tianqi"></div>
+		</div>
+		<div>
+		</div>
+	</div>
+
+	<!--#include virtual="/_head.html"-->
+
+	<div class="web_body">
+		<div class="wrapper">
+			<!-- 头条 -->
+			<div class="head_news">
+				<div class="clear_float">
+					<div class="fl head_news_contain" style="position:relative;background-image: url(/images/icon_toutiao.png);">
+						<div class="head_news_date1" id="lunar"></div>
+						<div class="head_news_date2"></div>
+					</div>
+					<div class="fl" id="headlines">
+						<?php foreach($this->articleList([
+						'modelid' => 1,
+						'num' => 1,
+						'_flag' => ["flag"=>2]
+						]) as $val):?>
+						<a href="<?=$val['url']?>" target="_blank">
+							<h1 class="head_title">
+								<?=$val['title']?>
+							</h1>
+						</a>
+						<a href="<?=$val['url']?>" target="_blank">
+							<h3>
+								<?=$val['desc']?>
+							</h3>
+						</a>
+						<?php endforeach;?>
+					</div>
+				</div>
+			</div>
+			<!-- banner -->
+			<div class="banner_wrap clear_float clearfix border_size">
+				<div class="fl">
+					<div class="swiper-container banner">
+						<div class="swiper-wrapper" id="swiper_wrapper">
+							<div class="swiper-slide">
+							</div>
+							<div class="swiper-slide">
+							</div>
+							<div class="swiper-slide">
+							</div>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+					<div style="margin-top: 10px;" id="dianshi_contain">
+						<a href="https://app.iqilu.com/share/dHZsLTIyMS0y.html" target="_blank">
+							<img src="https://img11.iqilu.com/221/2020/06/30/ddf1d490aaf096f0710c74c1f7da6813.jpg">
+						</a>
+						<a href="https://app.iqilu.com/share/dHZsLTIyMS05.html" target="_blank">
+							<img src="https://img11.iqilu.com/221/2020/06/30/9c8b422fda6ba585e7f3735396b9ce80.jpg">
+						</a>
+						<a href="https://app.iqilu.com/share/dHZsLTIyMS0z.html" target="_blank">
+							<img src="https://img11.iqilu.com/221/2020/06/30/8959f131f4958be98b42cc14f72a91bb.jpg">
+						</a>
+						<a href="https://app.iqilu.com/share/dHZsLTIyMS01.html" target="_blank">
+							<img src="https://img11.iqilu.com/221/2020/06/30/50323906b37d2e1d5789a7b61b591d09.jpg">
+						</a>
+					</div>
+				</div>
+				<div class="banner_news fl mgl30" id="getArticle">
+					<?php $news = $this->articleList([
+					'modelid' => 1,
+					'num' => 7,
+					'_flag' => ["flag"=>1]
+					]);?>
+					<?php foreach(array_slice($news,0,1) as $val):?>
+					<div class="clear_float">
+						<div class="fl">
+							<h3><a href="<?=$val['url']?>" target="_blank"><?=$val['title']?></a></h3>
+							<hr class="mgt12 mgb16 hr" />
+							<h4 class="">
+								<a href="<?=$val['url']?>" target="_blank">
+									<?=$val['desc']?>
+								</a>
+							</h4>
+						</div>
+						<div class="fr mgt20" style="width: 52px;">
+							<div class="banner_news_rili1"><?=date('d',strtotime($val['publish_at']))?></div>
+							<div class="banner_news_rili2"><?=date('Y-m',strtotime($val['publish_at']))?></div>
+						</div>
+					</div>
+					<?php endforeach;?>
+					<ul>
+						<?php foreach(array_slice($news,1) as $k=>$val):?>
+						<li class="banner_news_item clear_float">
+							<div class="banner_news_item_div">
+								<a href='<?=$val["url"]?>' target="_blank" class="fl">
+									<?=$val["title"]?>
+								</a>
+							</div>
+							<span class="fr banner_news_item_date">
+								<?=date("Y-m-d",strtotime($val["publish_at"]))?>
+							</span>
+						</li>
+						<?php endforeach;?>
+					</ul>
+				</div>
+			</div>
+			<!-- 公告和广告 -->
+			<div class="notice_adv clear_float">
+				<?php $this->fragment(29);?>
+			</div>
+
+			<!-- 看电视听广播看报纸 -->
+			<div class="tv_newspaper_radio clear_float border_size">
+				<!--即墨新闻  -->
+				<div class="zhengwuhao fl border_size" id="news_contain"></div>
+
+				<!-- 民生 -->
+				<div class="minsheng fl mgl20 border_size" id="livelihood_contain"></div>
+
+				<!-- 直播 -->
+				<div class="zhibo fr border_size" id="now_video_contain"></div>
+
+				<!-- 电视直播 -->
+				<!-- <div class="dianshizhibo fl mgt20 border_size" id="dianshi_contain">
+				</div> -->
+			</div>
+
+			<!-- 公告和广告 -->
+			<div class="notice_adv1 clear_float">
+				<?php $this->fragment(31);?>
+
+			</div>
+
+			<div class="tv_newspaper_radio clear_float border_size">
+				<!-- 即墨问政 -->
+				<div class="tabitem3 fl border_size clear_float">
+					<div class="tit clear_float">
+						<h2 class="fl"><a href="/list_question.html" title="" target="_blank">即墨问政</a></h2>
+						<div class="fl tit_title">Jimo wenzheng</div>
+					</div>
+					<ul class="pic mgt20" style="display: block;" id="latest_question_contain">
+					</ul>
+				</div>
+
+				<!-- 即墨号 -->
+				<div class="jimo fl mgl20 border_size" id="news_contain1"></div>
+
+				<!-- 新即墨报 -->
+				<div class="newjimo fr border_size" id="jimobao_contain">
+				</div>
+			</div>
+
+			<div class="notice_adv clear_float">
+				<?php $this->fragment(33);?>
+			</div>
+
+			<div class="tv_newspaper_radio clear_float border_size">
+				<!-- 掌上生活 -->
+				<div class="shou_life fl border_size">
+					<div class="tit clear_float">
+						<h2 class="fl"><a href="javascript:void(0)">掌上生活</a></h2>
+						<div class="fl tit_title">Palm life</div>
+					</div>
+					<div class="clear_float" id="life_number_contain">
+					</div>
+				</div>
+
+				<!-- 即墨招聘 -->
+				<div class="recruitment fl mgl20 border_size">
+					<div class="tit clear_float">
+						<h2 class="fl"><a href="" title="" target="_blank">即墨招聘</a></h2>
+						<div class="fl tit_title">Jimo recruitment</div>
+					</div>
+					<ul class="mgt20 zhaopin" id="zhaopin_contain">
+					</ul>
+					<div class="saoma" style="text-align: center;">
+						<a href="https://app-job.iqilu.com/wap/index.html?_orgid_=221#/" target="_blank">
+							<img src="/images/icon_saoma1.png" class="change_xiao">
+						</a>
+					</div>
+					<img src="/images/icon_saoma.png" class="change_da">
+				</div>
+
+				<!-- 随手拍 -->
+				<div class="suishoupai fr border_size" id="shoot_contain">
+				</div>
+			</div>
+			<div class="notice_adv clear_float">
+				<?php $this->fragment(35);?>
+			</div>
+
+			<div class="tv_newspaper_radio clear_float border_size">
+				<!-- 友情链接 -->
+				<div class="web_botton fl border_size">
+					<div class="tit">
+						<img src="/images/icon_you.png">
+					</div>
+					<div style="margin-top: 20px;" class="clear_float">
+						<a href="http://www.jimo.gov.cn/" target="_blank">
+							<div class="web_botton_div">
+								<img class="web_botton_img fl web_botton_div1" src="/images/icon_youqing1.png" alt="">
+								<div class="web_botton_div2">即墨政务网</div>
+							</div>
+						</a>
+						<a href="http://www.qingdaonews.com/" target="_blank">
+							<div class="web_botton_div">
+								<img class="web_botton_img fl web_botton_div1" src="/images/icon_youqing2.png" alt="">
+								<div class="web_botton_div2">青岛新闻网</div>
+							</div>
+						</a>
+						<a href="http://www.iqilu.com/" target="_blank">
+							<div class="web_botton_div">
+								<img class="web_botton_img fl web_botton_div1" src="/images/icon_youqing3.png" alt="" style="top: 10px;
+									left: 30px;">
+								<div class="web_botton_div2">齐鲁网</div>
+							</div>
+						</a>
+						<a href="http://sd.dzwww.com/" target="_blank">
+							<div class="web_botton_div">
+								<img class="web_botton_img fl web_botton_div1" src="/images/icon_youqing4.png" alt="" style="top: 15px;
+									left: 30px;">
+								<div class="web_botton_div2">大众网</div>
+							</div>
+						</a>
+						<a href="http://xinhuanet.com/" target="_blank">
+							<div class="web_botton_div">
+								<img class="web_botton_img fl web_botton_div1" src="/images/icon_youqing5.png" alt="" style="top: 18px;
+									left: 30px;">
+								<div class="web_botton_div2">新华网</div>
+							</div>
+						</a>
+						<a href="http://www.people.com.cn/" target="_blank">
+							<div class="web_botton_div">
+								<img class="web_botton_img fl web_botton_div1" src="/images/icon_youqing6.png" alt="" style="top: 15px;
+									left: 25px;">
+								<div class="web_botton_div2">人民网</div>
+							</div>
+						</a>
+						<a href="https://tv.cctv.com/" target="_blank">
+							<div class="web_botton_div">
+								<img class="web_botton_img fl web_botton_div1" src="/images/icon_youqing7.png" alt="" style="top: 0px;
+									left: 25px;">
+								<div class="web_botton_div2">央视网</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				</ul>
+			</div>
+		</div>
+
+		<!-- 底部 -->
+		<div class="web-footer">
+			<div class="web-footer_middle">
+				<div class="fl">
+					<p class="copyright">
+						版权所有 中共青岛市即墨区委宣传部主管 青岛市即墨区融媒体中心主办
+						<br>
+						地址：青岛市即墨区鹤山路158号 邮箱：jmwchina@126.com
+					</p>
+					<p>电话：0532-87568588 邮编：266200</p>
+					<div>
+						<img src="/images/img_bottom.png" class="img_botton1 fl mgt10 mgr10">
+						<p>
+							网站备案：鲁ICP备12001877号
+						</p>
+					</div>
+				</div>
+				<div class="fr clear_float">
+					<div class="erweima_contain">
+						<img src="/images/icon_zuihou.png" alt="" />
+						<div class="erweima_contain_title">知即墨</div>
+					</div>
+					<div class="erweima_contain">
+						<img src="/images/icon_guanwei.png" alt="" />
+						<div class="erweima_contain_title">新即墨官微</div>
+					</div>
+					<div class="erweima_contain">
+						<div class="erweima1">
+							<img src="/images/icon_wei.png" alt="" />
+						</div>
+						<div class="erweima_contain_title">中国即墨网微博</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 新闻导航栏 -->
+		<script id="nav" type="text/template">
+			{{each message}}
+				{{if $value.tpl != '' && $value.type == "article" }}
+					<li><a href={{"/" +$value.id + "/index.html"}} target="_blank">{{$value.catename}}</a></li>
+				{{/if}}
+			{{/each}}
+		</script>
+
+		<!-- 看电视导航栏 -->
+		<script id="nav1" type="text/template">
+			{{each message}}
+				{{if $value.tpl != ''}}
+					<li><a href={{"/" +$value.id + "/index.html"}} target="_blank">{{$value.catename}}</a></li>
+				{{/if}}
+			{{/each}}
+		</script>
+
+		<!-- 新闻广播导航栏 -->
+		<script id="nav2" type="text/template">
+			{{each message}}
+				{{if $value.tpl != ''}}
+					<li><a href={{"/" +$value.id + "/index.html"}} target="_blank">{{$value.catename}}</a></li>
+				{{/if}}
+			{{/each}}
+		</script>
+
+		<!-- 文明实践导航栏 -->
+		<script id="nav3" type="text/template">
+			{{each message}}
+				{{if $value.tpl != ''}}
+					<li><a href={{"/" +$value.id + "/index.html"}} target="_blank">{{$value.catename}}</a></li>
+				{{/if}}
+			{{/each}}
+		</script>
+
+		<!-- 头条文稿 -->
+		<script id="headerGetArticle1" type="text/template">
+			{{if message.infos.length>3}}
+				<a href={{message.infos[0].url}} target="_blank">
+					<h1 class="head_title">
+						{{message.infos[0].title}}
+					</h1>
+				</a>
+				<a href={{message.infos[0].url}} target="_blank">
+					<h3>
+						{{message.infos[0].desc}}
+					</h3>
+				</a>
+			{{/if}}
+		</script>
+
+		<!-- 头部文稿 -->
+		<script id="headerGetArticle" type="text/template">
+			{{if message.infos.length>6}}
+				<div class="clear_float">
+					<div class="fl">
+						<h3><a href={{message.infos[0].url}}>{{message.infos[0].title}}</a></h3>
+						<hr class="mgt12 mgb16 hr" />
+						<h4 class="color">
+							<a href={{message.infos[0].url}}>
+								{{message.infos[0].desc}}
+							</a>
+						</h4>
+					</div>
+					<div class="fr mgt20" style="width: 52px;">
+						<div class="banner_news_rili1">06</div>
+						<div class="banner_news_rili2">2020-04</div>
+					</div>
+				</div>
+				<ul>
+					{{each message.infos.slice(1,7)}}
+				<li class="banner_news_item clear_float">
+					<div class="banner_news_item_div">
+						<a href={{$value.url}} target="_blank" class="fl">
+							{{$value.title}}
+						</a>
+					</div>
+					<span class="fr banner_news_item_date">
+						{{$value.publish_at}}
+					</span>
+				</li>
+				{{/each}}
+				</ul>					
+				{{/if}}
+		</script>
+
+		<!--幻灯片  -->
+		<script id="slides" type="text/template">
+			{{each message}}
+			<div class="swiper-slide">
+				<img src="./images/icon_dahuandeng.png" style="z-index: 11;position:absolute;bottom: 0;">
+				{{if $value.opentype == "url"}}
+				<a href={{$value.url}} target="_blank">
+					<img class="banner_item" src={{$value.image ? $value.image:'./images/icon_huaban.png'}} />
+				</a>
+				<a href={{$value.url}} target="_blank">
+					<p class="banner_item_desc">{{ $value.title }}</p>
+				</a>
+				{{else}}
+				<a href={{"https://app.iqilu.com/qrcode/param?param=" + $value.param + "&opentype=" + $value.opentype + "&orgid=" + $value.orgid +"&isweb=1" }} target="_blank">
+				<img class="banner_item" src={{$value.image ? $value.image:'./images/icon_huaban.png'}} />
+				</a>
+				<a href={{"https://app.iqilu.com/qrcode/param?param=" + $value.param + "&opentype=" + $value.opentype + "&orgid=" + $value.orgid +"&isweb=1" }} target="_blank">
+				<p class="banner_item_desc">{{ $value.title }}</p>
+				</a>
+				{{/if}}
+			</div>
+			{{/each}}
+		</script>
+
+		<!-- 即墨报 -->
+		<script id="jimobao" type="text/template">
+			<div class="tit clear_float">
+				<h2 class="fl"><a href="https://www.xinjimo.com/jqckj/" title="" target="_blank">新即墨报</a></h2>
+				<div class="fl tit_title">New jimo newspaper</div>
+			</div>
+			<div class="trisection_cnt paper_content clear_float mgt20">
+				<div class="fl" style="margin-left: -9px;">
+					<a href="https://www.xinjimo.com/jqckj/" target="_blank"><img class="left_float paper_pic" src="/images/icon_baozhi.png" alt=""
+							style="display: none;"></a>
+					<a href="https://www.xinjimo.com/jqckj/" target="_blank"><img class="left_float paper_pic js-hidden"
+							src="/images/icon_baozhi.png" alt="" style="display: none;"></a>
+					<a href="https://www.xinjimo.com/jqckj/" target="_blank"><img class="left_float paper_pic js-hidden"
+							src="/images/icon_baozhi.png" alt="" style="display: none;"></a>
+					<a href="https://www.xinjimo.com/jqckj/" target="_blank"><img class="left_float paper_pic js-hidden"
+							src="/images/icon_baozhi.png" alt="" style="display: block;"></a>
+					<a href="https://www.xinjimo.com/jqckj/" target="_blank"><img class="left_float paper_pic js-hidden"
+							src="/images/icon_baozhi.png" alt="" style="display: none;"></a>
+				</div>
+				<ul class="fl">
+					{{each message.infos}}
+					<li class="newjimo_item clear_float">
+						<i class="fl"></i>
+						<div class="newjimo_item_div fl">
+							<a href=https://www.xinjimo.com/jqckj/ target="_blank" class="fl">
+								{{$value.title}}
+							</a>
+						</div>
+					</li>
+					{{/each}}
+				</ul>
+			</div>
+		</script>
+
+		<!-- 民生播报 -->
+		<script id="livelihood" type="text/template">
+			<div class="tit clear_float">
+				<h2 class="fl"><a href={{"/14459/index.html?cateid=14459"}} title="" target="_blank">民生播报</a></h2>
+				<div class="fl tit_title">Livelihood</div>
+				<a href={{"/14459/index.html?cateid=14459"}} target="_blank">
+					<img src="/images/icon_gengduo.png" class="fr mgt10">
+				</a>
+			</div>
+			{{if message.infos.length>4}}
+				{{each message.infos.slice(1,4)}}							
+					<div class="cell">
+						<div class="cell_img">
+							<a href={{$value.url}} target="_blank">
+								<img src={{$value.thumbnail ? $value.thumbnail:'/images/icon_huaban.png'}}>
+							</a>
+						</div>
+						<div class="cell_main">
+							<div class="cell_main_title">
+								<a href={{$value.url}} target="_blank">
+									{{"【电视点播】"+ $value.title}}
+								</a>
+							</div>
+							<div class="cell_main_info">
+								<span class="cell_main_info_item">播出时间：</span>
+								<span class="cell_main_info_item">{{$value.publish_at}}</span>
+							</div>
+						</div>
+					</div>
+				{{/each}}
+			{{else}}
+				{{each message.infos}}							
+				<div class="cell">
+					<div class="cell_img">
+						<a href={{$value.url}} target="_blank">
+							<img src={{$value.thumbnail ? $value.thumbnail:'/images/icon_huaban.png'}}>
+						</a>
+					</div>
+					<div class="cell_main">
+						<div class="cell_main_title">
+							<a href={{$value.url}} target="_blank">
+								{{"【电视点播】"+ $value.title}}
+							</a>
+						</div>
+						<div class="cell_main_info">
+							<span class="cell_main_info_item">播出时间：</span>
+							<span class="cell_main_info_item">{{$value.publish_at}}</span>
+						</div>
+					</div>
+				</div>
+				{{/each}}
+			{{/if}}
+		</script>
+
+		<!-- 即墨号 -->
+		<script id="news1" type="text/template">
+			<div class="tit clear_float">
+				<h2 class="fl"><a href="javascript:;" title="">即墨号</a></h2>
+				<div class="fl tit_title">Jimo account</div>
+			</div>
+			{{if message.articleList.length>2}}
+				{{each message.articleList.slice(0,2)}}							
+					<div class="cell">
+						<div class="cell_img">
+							<a href={{$value.shareHtml}} target="_blank">
+								<img src={{$value.thumbnail ? $value.thumbnail:'/images/icon_huaban.png'}}>
+							</a>
+						</div>
+						<div class="cell_main">
+							<div class="cell_main_title">
+								<a href={{$value.shareHtml}} target="_blank">
+									{{$value.title}}
+								</a>
+							</div>
+							<div class="cell_main_info">
+								<span class="cell_main_info_item">{{$value.department.substr(0,5)}}</span>
+								<span class="cell_main_info_item">{{$value.publish_at}}</span>
+							</div>
+						</div>
+					</div>
+				{{/each}}
+			{{else}}
+				{{each message.articleList}}							
+				<div class="cell">
+					<div class="cell_img">
+						<a href={{$value.shareHtml}} target="_blank">
+							<img src={{$value.thumbnail ? $value.thumbnail:'/images/icon_huaban.png'}}>
+						</a>
+					</div>
+					<div class="cell_main">
+						<div class="cell_main_title">
+							<a href={{$value.shareHtml}} target="_blank">
+								{{$value.title}}
+							</a>
+						</div>
+						<div class="cell_main_info">
+							<span class="cell_main_info_item">{{$value.department.substr(0,5)}}</span>
+							<span class="cell_main_info_item">{{$value.publish_at}}</span>
+						</div>
+					</div>
+				</div>
+				{{/each}}
+			{{/if}}
+		</script>
+
+		<!-- 随手拍 -->
+		<script id="shoot" type="text/template">
+			<div class="tit clear_float">
+					<h2 class="fl"><a href={{"/list_snapshot.html"}} title="" target="_blank">随手拍</a></h2>
+					<div class="fl tit_title">Snapshot</div>
+				</div>
+				<div class="swiper_father">
+					<div class="swiper-container1">
+						<div class="swiper-wrapper">
+							{{each message.infos.slice(1)}}	
+								{{if $value.share.image}}
+									<div class="swiper-slide">
+											<a href={{$value.share.url}}>
+												<img src={{$value.share.image}}>
+												<img src="/images/icon_zanting.png" class="icon_zanting">
+												<h3>{{$value.title.substr(0,25)}}</h3>
+											</a>
+											<img src="/images/icon_zhe.png" style="z-index: 11;position:absolute;bottom: 0;" class="zhezhao">
+									</div>	
+								{{/if}}		
+							{{/each}}
+						</div>			
+					</div>
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+				</div>
+			</script>
+
+		<!-- 直播 -->
+		<script id="now_video" type="text/template">
+			<div class="tit clear_float">
+				<h2 class="fl"><a href="https://app.iqilu.com/share/bGNhdGUtMjIxLQ.html" title="" target="_blank">直播</a></h2>
+				<div class="fl tit_title">Live broadcast</div>
+				<a href=https://app.iqilu.com/share/bGNhdGUtMjIxLQ.html target="_blank">
+					<img src="/images/icon_gengduo.png" class="fr mgt10">
+				</a>
+			</div>
+			{{if message.infos.length>1}}
+			<a href={{message.infos[0].share.url}} title="" target="_blank">
+				<h3>
+					{{message.infos[0].title}}
+				</h3>
+			</a>
+			<a href={{message.infos[0].share.url}} target="_blank">
+				<div class="guoneiguoji_img">
+					<img src={{message.infos[0].poster ? message.infos[0].poster :'/images/icon_huaban.png'}}>
+					<img src="/images/zhibozhong-icon.png" class="zhibozhong">
+					<img src="/images/icon_zanting.png" class="guoneiguoji_img_zanting">
+				</div>	
+			</a>
+				<ul>
+				{{each message.infos.slice(1,3)}}							
+						<li class="clear_float">
+							<i></i>
+							<a href={{$value.share.url}} title="" target="_blank" class="fl">{{$value.title}}</a>
+						</li>		
+				{{/each}}
+			</ul>
+			{{/if}}
+		</script>
+
+		<!-- 最新问政 -->
+		<script id="latest_question" type="text/template">
+			{{if message.infos.length>3}}
+				{{each message.infos.slice(0,3)}}							
+					<li class="tabitem4_ul">
+						<div class="div_a"><a>{{$value.body}}
+						</a>
+					</div>
+						<div class="pic_content">
+							<a href="/list_question.html" target="_blank">{{$value.reply}}
+							</a>
+						</div>
+					</li>
+				{{/each}}
+			{{else}}
+				{{each message.infos}}							
+					<li class="tabitem4_ul">
+						<a>{{$value.body}}
+						</a>
+						<div class="pic_content">
+							<a href="/list_question.html" target="_blank">{{$value.reply}}
+							</a>
+						</div>
+					</li>
+				{{/each}}
+			{{/if}}
+		</script>
+
+		<!-- 即墨新闻 -->
+		<script id="news" type="text/template">
+			<div class="tit clear_float">
+			<h2 class="fl"><a href={{"/14457/index.html?cateid=14457"}} title="" target="_blank">即墨新闻</a></h2>
+			<div class="fl tit_title">Jimo news</div>
+			<a href={{"/14457/index.html?cateid=14457"}} target="_blank">
+				<img src="/images/icon_gengduo.png" class="fr mgt10">
+			</a>
+		</div>
+		{{if message.infos.length>3}}
+			{{each message.infos.slice(0,3)}}							
+				<div class="cell">
+					<div class="cell_img">
+						<a href={{$value.url}} target="_blank">
+							<img src={{$value.thumbnail ? $value.thumbnail:'/images/icon_huaban.png'}}>
+						</a>
+					</div>
+					<div class="cell_main">
+						<div class="cell_main_title">
+							<a href={{$value.url}} target="_blank">
+								{{  "【电视点播】" +$value.title}}
+							</a>
+						</div>
+						<div class="cell_main_info">
+							<span class="cell_main_info_item">播出时间：</span>
+							<span class="cell_main_info_item">{{$value.publish_at}}</span>
+						</div>
+					</div>
+				</div>
+			{{/each}}
+		{{else}}
+			{{each message.infos}}							
+			<div class="cell">
+				<div class="cell_img">
+					<a href={{$value.url}} target="_blank">
+						<img src={{$value.thumbnail ? $value.thumbnail:'/images/icon_huaban.png'}}>
+					</a>
+				</div>
+				<div class="cell_main">
+					<div class="cell_main_title">
+						<a href={{"https://app.iqilu.com/v1" + $value.url}} target="_blank">
+							{{ "【电视点播】" +$value.title}}
+						</a>
+					</div>
+					<div class="cell_main_info">
+						<span class="cell_main_info_item">播出时间：</span>
+						<span class="cell_main_info_item">{{$value.publish_at}}</span>
+					</div>
+				</div>
+			</div>
+			{{/each}}
+		{{/if}}
+	</script>
+
+		<!-- 电视直播
+		<script id="my-video" type="text/template">
+			{{each message}}
+				<a href={{$value.share.url}}>
+					<img src={{$value.icon}}>
+				</a>
+			{{/each}}
+		</script> -->
+
+		<!-- 掌上生活 -->
+		<script id="life" type="text/template">
+			{{if message[1].items.length>16}}
+			<ul class="fl">
+				{{each message[1].items.slice(0,10)}}					
+					<li class="color1">
+						<a href={{$value.url}} title="" target="_blank">
+							<div>
+								<img src={{$value.thumb}}>
+								<h5>{{$value.title}}</h5>
+							</div>
+						</a>
+					</li>				
+				{{/each}}
+			</ul>
+			{{else}}
+			<ul class="fl">
+				{{each message[1].items}}					
+					<li class="color1">
+						<a href={{$value.url}} title="" target="_blank">
+							<div>
+								<img src={{$value.thumb}}>
+								<h5>{{$value.title}}</h5>
+							</div>
+						</a>
+					</li>				
+				{{/each}}
+			</ul>
+			{{/if}}
+		</script>
+
+		<!-- 即墨招聘 -->
+		<script id="zhaopin" type="text/template">
+			{{each message.slice(0,3)}}
+				<li>
+					<div class="clear_float">
+						<div class="recruitment_job fl">
+							<img src="/images/icon_job.png">
+						</div>
+						<div class="fl mgl20">
+							<a href={{$value.url}}>
+								<div class="job_title">{{$value.companyName}}</div>
+							</a>
+							<ul class="jinqian_ul">
+								<li><a href={{$value.url}} title="" target="_blank">{{$value.salary}}</a></li>
+								<li><a href={{$value.url}} title="" target="_blank">{{$value.city}}</a></li>
+								<li><a href={{$value.url}} title="" target="_blank">本科</a></li>
+								<li><a href={{$value.url}} title="" target="_blank">{{$value.positionName.substr(0,4)}}</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			{{/each}}
+		</script>
+
+		<script src="/js/jquery-1.11.1.js"></script>
+		<script src="/js/template-web.js"></script>
+		<script src="/js/getNavList.js"></script>
+		<script src="/js/index.js"></script>
+		<script src="/js/swiper.min.js"></script>
+		<script src="/js/get_lunar.js"></script>
+		<script src="/js/style.js"></script>
+</body>
+
+</html>

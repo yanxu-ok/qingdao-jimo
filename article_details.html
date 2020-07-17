@@ -1,0 +1,327 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta name="description" content="<?=$article['desc']?>" />
+	<meta name="keywords" content="<?=$article['keyword']?>" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="stylesheet" type="text/css" href="/css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://file.iqilu.com/custom/new/v2016/css/public.css" />
+	<link rel="stylesheet" type="text/css" href="/css/gloal_style.css" />
+	<link rel="stylesheet" type="text/css" href="/css/article_details.css" />
+	<link rel="stylesheet" type="text/css" href="/videojs/video.css" />
+	<title><?=$article['title']?>-中国即墨网</title>
+</head>
+
+<body>
+	<!-- logo -->
+	<div class="logo_title_down clear_float">
+		<div class="background1"></div>
+		<a href="/" class="fl">
+			<img class="logo" src="/images/icon_logo.jpg" />
+		</a>
+		<div class="search fr" id="search_contain">
+		</div>
+		<div class="download fr">
+			<div class="fl erweima_box">
+				<img class="erweima" src="/images/icon_dibu1.png" />
+			</div>
+			<div class="download_info fl">
+				<p class="download_title">扫描二维码</p>
+				<p class="download_title">下载“知即墨”APP</p>
+			</div>
+		</div>
+	</div>
+
+	<!--#include virtual="/_head.html"-->
+
+	<!-- 中间content -->
+	<div class="middle_contain clear_float">
+		<div class="middle_contain_left fl" id="headlines">
+			<div class="middle_contain_left_title">
+				<a href="javascript:;" title="">
+					<?=$article['title']?>
+				</a>
+			</div>
+			<div class="middle_title_text clear_float">
+				<div class="fl">
+					<span>来源：<?=$article['copyfrom']??'中国即墨网'?></span>&nbsp;&nbsp;<span>日期：<?=$article['publish_at']?></span>
+				</div>
+				<div class="fr clear_float">
+					<div id="btn_button1" class="middle_font fl">字号+</div>
+					<div id="btn_button2" class="middle_font fl">字号-</div>
+					<img src="/images/icon_bo.png" class="middle_title_text_img fr" id="shareweibo">
+					<img src="/images/icon_kongjian.png" class="middle_title_text_img fr" id="shareweixin">
+					<img src="/images/icon_yie.png" class="middle_title_text_img fr" id="shareqq">
+					<!-- <div class="bshare-custom fr">
+						<div class="bsPromo bsPromo2"></div><a title="分享到QQ好友" class="bshare-qqim" href="javascript:void(0);"></a><a
+							title="分享到微信" class="bshare-weixin" href="javascript:void(0);"></a><a title="分享到新浪微博"
+							class="bshare-sinaminiblog" href="javascript:void(0);"></a>
+					</div> -->
+				</div>
+			</div>
+			<div id="content" class="middle_contain_left_content">
+				<?php foreach(json_decode($article['media'],true) as $media):?>
+				<video style="width:840px;height:472px;" id="my-video" class="video-js" controls preload="auto"
+					poster="<?=$media['poster']?>">
+					<source src="<?=$media['url']?>" type="video/mp4">
+				</video>
+				<?php endforeach;?>
+				<?=$article['body']?>
+				<div class="middle_contain_left_author clear_float">
+					<a href="">
+						<p class="fr"><?=$article['author'] ? "编辑： ".$article['author'] : ""?>
+							<?=$article['editor'] ? "责任编辑： ".$article['editor'] : ""?>
+							<?php if($article['correspondent'] && $article['correspondent'] != '[]'):?>
+							<br />
+							通讯员：
+							<?php foreach(json_decode($article['correspondent'],true) as $co):?>
+							<?=$co['desc'] . $co['name']?>
+							<?php endforeach;?>
+							<?php endif;?>
+						</p>
+					</a>
+				</div>
+				<div class="middle_contain_left_contact clear_float">
+					<a href="">
+						<img src="/images/icon_bo.png" class="fr middle_title_text_img">
+					</a>
+					<a href="">
+						<img src="/images/icon_kongjian.png" class="fr middle_title_text_img">
+					</a>
+					<a href="">
+						<img src="/images/icon_yie.png" class="fr middle_title_text_img">
+					</a>
+				</div>
+				<div class="middle_contain_left_erweima clear_float">
+					<img src="/images/icon_dibu1.png" class="fl">
+					<div class="fl">
+						<p>知即墨 APP</p>
+						<span>更多精彩！扫码下载“知即墨”APP 了解</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 右侧 -->
+		<div class="middle_contain_right fr">
+			<div class="margin50" id="related_contain">
+			</div>
+			<div class="margin50" id="local_contain">
+			</div>
+			<div class="margin50" id="headlines_contain">
+			</div>
+		</div>
+	</div>
+
+	<!-- 底部 -->
+	<div class="web-footer">
+		<div class="web-footer_middle">
+			<div class="fl">
+				<p class="copyright">
+					版权所有 中共青岛市即墨区委宣传部主管 青岛市即墨区融媒体中心主办
+					<br>
+					地址：青岛市即墨区鹤山路158号 邮箱：jmwchina@126.com
+				</p>
+				<p>电话：0532-87568588 邮编：266200</p>
+				<div>
+					<img src="/images/img_bottom.png" class="img_botton1 fl mgt10 mgr10">
+					<p>
+						网站备案：鲁ICP备12001877号
+					</p>
+				</div>
+			</div>
+			<div class="fr clear_float">
+				<div class="erweima_contain">
+					<img src="/images/icon_zuihou.png" alt="" />
+					<div class="erweima_contain_title">知即墨</div>
+				</div>
+				<div class="erweima_contain">
+					<img src="/images/icon_guanwei.png" alt="" />
+					<div class="erweima_contain_title">新即墨官微</div>
+				</div>
+				<div class="erweima_contain">
+					<div class="erweima1">
+						<img src="/images/icon_wei.png" alt="" />
+					</div>
+					<div class="erweima_contain_title">中国即墨网微博</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 新闻导航栏 -->
+	<script id="nav" type="text/template">
+		{{each message}}
+			{{if $value.tpl != '' && $value.type == "article" }}
+				<li><a href={{"/" +$value.id + "/index.html"}} target="_blank">{{$value.catename}}</a></li>
+			{{/if}}
+		{{/each}}
+	</script>
+
+	<!-- 看电视导航栏 -->
+	<script id="nav1" type="text/template">
+		{{each message}}
+			{{if $value.tpl != ''}}
+				<li><a href={{"/" +$value.id + "/index.html"}} target="_blank">{{$value.catename}}</a></li>
+			{{/if}}
+		{{/each}}
+	</script>
+
+	<!-- 新闻广播导航栏 -->
+	<script id="nav2" type="text/template">
+		{{each message}}
+			{{if $value.tpl != ''}}
+				<li><a href={{"/" +$value.id + "/index.html"}} target="_blank">{{$value.catename}}</a></li>
+			{{/if}}
+		{{/each}}
+	</script>
+
+	<!-- 文明实践导航栏 -->
+	<script id="nav3" type="text/template">
+		{{each message}}
+			{{if $value.tpl != ''}}
+				<li><a href={{"/" +$value.id + "/index.html"}} target="_blank">{{$value.catename}}</a></li>
+			{{/if}}
+		{{/each}}
+	</script>
+
+	<!-- 头部搜索 -->
+	<script id="search1" type="text/template">
+		<input class="search_input fl" id="searchId" type="text" />
+    <a href="" target="_black" id="search_a">
+      <div class="search_icon fl" id="search_btn"></div>
+    </a>
+  </script>
+
+
+	<!-- 相关新闻 -->
+	<script id="related" type="text/template">
+		{{if message.infos.length != 0}}
+				<div class="middle_contain_right_title">
+					<ul class="clear_float">
+						<li>
+							<a href="javascript:;" title="" target="_blank">
+								<div class="color"></div>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" title="" target="_blank">
+								相关新闻
+							</a>
+						</li>
+					</ul>
+				</div>
+				<ul class="middle_contain_right_ul">
+						<a href={{message.infos[0]._url}} title="" target="_blank">
+							<img src={{message.infos[0].thumbnail ? message.infos[0].thumbnail : '/images/icon_huaban.png' }}>
+						</a>
+					{{if  message.infos.length>3}}
+						{{each message.infos.slice(0,3)}}		
+						<li class="auto_cut">
+							<div class="auto_cut_div">
+								<a href={{$value._url}} title="" target="_blank">{{$value.title}}</a>
+							</div>
+						</li>
+						{{/each}}
+					{{/if}}
+				</ul>
+		{{/if}}
+		</script>
+
+	<!-- 本地新闻  -->
+	<script id="local" type="text/template">
+		{{if message.infos.length != 0}}
+				<div class="middle_contain_right_title clear_float">
+					<ul class="clear_float">
+						<li>
+							<a href="javascript:;" title="" target="_blank">
+								<div class="color"></div>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" title="" target="_blank">
+								本地新闻
+							</a>
+						</li>
+					</ul>
+				</div>
+				<ul class="middle_contain_right_ul1 clear_float mgt20">
+					{{if  message.infos.length>4}}
+						{{each message.infos.slice(0,4)}}
+								<li class="auto_cut1 fl mgb5 mgr5">
+									<a href={{$value._url}} title="" target="_blank">
+										<img src={{$value.thumbnail ? $value.thumbnail : '/images/icon_huaban.png'}} />
+									</a>
+									<h6 class="auto_cut1_div">{{$value.title}}</h6>
+								</li>
+						{{/each}}
+						{{else}}
+						{{each message.infos}}
+							<li class="auto_cut1 fl mgb5 mgr5">
+								<a href={{$value._url}} title="" target="_blank">
+									<img src={{$value.thumbnail ? $value.thumbnail : '/images/icon_huaban.png'}} />
+								</a>
+								<h6 class="auto_cut1_div">{{$value.title}}</h6>
+							</li>
+						{{/each}}
+					{{/if}}
+				</ul>
+		{{/if}}
+		</script>
+
+	<!-- 头条新闻  -->
+	<script id="headlines1" type="text/template">
+		{{if message.infos.length != 0}}
+				<div class="middle_contain_right_title clear_float">
+					<ul class="clear_float">
+						<li>
+							<a href="javascript:;" title="" target="_blank">
+								<div class="color"></div>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" title="" target="_blank">
+								头条新闻
+							</a>
+						</li>
+					</ul>
+				</div>
+				<ul class="middle_contain_right_ul">
+						<a href={{message.infos[0]._url}} title="" target="_blank">
+							<img src={{message.infos[0].thumbnail ? message.infos[0].thumbnail : '/images/icon_huaban.png'}} />
+						</a>
+					{{if message.infos.length>3}}
+						{{each message.infos.slice(0,3)}}		
+						<li class="auto_cut">
+							<div class="auto_cut_div">
+								<a href={{$value._url}} title="" target="_blank">{{$value.title}}</a>
+							</div>
+						</li>
+						{{/each}}
+					{{/if}}
+			</ul>
+		{{/if}}
+
+	</script>
+
+	<script>
+		// 栏目id
+		var currectCateId = "<?=$article['cateid']?>";
+
+	</script>
+	<script src="/js/jquery-1.11.1.js"></script>
+	<script src="/js/template-web.js"></script>
+	<script src="/js/tools.js"></script>
+	<script src="/js/getNavList.js"></script>
+	<script src="/js/article_details.js"></script>
+	<script src="/js/swiper.min.js"></script>
+	<script src="/js/share.js"></script>
+	<script src="/js/bshare.js"></script>
+	<script src="/js/style.js"></script>
+	<script src="/videojs/video-ie8.js"></script>
+	<script src="/videojs/video.js"></script>
+</body>
+
+</html>

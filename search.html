@@ -1,0 +1,307 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="stylesheet" type="text/css" href="/css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://file.iqilu.com/custom/new/v2016/css/public.css" />
+	<link rel="stylesheet" type="text/css" href="/css/gloal_style.css" />
+	<link rel="stylesheet" type="text/css" href="/css/list_search.css" />
+	<title>搜索结果-中国即墨网</title>
+</head>
+
+<body>
+	<!-- logo -->
+	<div class="logo_title_down clear_float">
+		<div class="background1"></div>
+		<a href="/" class="fl">
+			<img class="logo" src="/images/icon_logo.jpg" />
+		</a>
+		<div class="search fr" id="search_contain">
+		</div>
+		<div class="download fr">
+			<div class="fl erweima_box">
+				<img class="erweima" src="/images/icon_dibu1.png" />
+			</div>
+			<div class="download_info fl">
+				<p class="download_title">扫描二维码</p>
+				<p class="download_title">下载“知即墨”APP</p>
+			</div>
+		</div>
+	</div>
+
+	<!--#include virtual="/_head.html"-->
+
+	<!--搜索框  -->
+	<div class="search_contain clear_float">
+		<div class="search1 fl">
+			<input class="search_input fl" type="text" id="search_value" />
+			<img class="search_icon fl" src="/images/icon-search.png" id="search_btn1" />
+		</div>
+		<div class="search_title fl">
+			<ul>
+				<li class="fl"><a href="" title="" target="_blank">公司</a></li>
+				<li class="fl"><a href="" title="" target="_blank">证监会</a></li>
+				<li class="fl"><a href="" title="" target="_blank">创投公司</a></li>
+				<li class="fl"><a href="" title="" target="_blank">股份有限制</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="jieguo" id="jie_guo"></div>
+
+	<!-- 中间content -->
+	<div class="middle_contain clear_float">
+		<div class="middle_contain_left fl" id="myHeader_contain"></div>
+		<!-- 右侧 -->
+		<div class="middle_contain_right fr">
+			<div class="middle_contain_right fr">
+				<div class="margin50 news1" id="related_contain">
+				</div>
+				<div class="margin50 news2" id="local_contain">
+				</div>
+				<div class="margin50 news3" id="headlines_contain">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 分页 -->
+	<div class="pagination_contain">
+		<ul id='ul'>
+			<li class="fl" id="index_page" style="width: 50px;">首页</li>
+			<li class="fl" style="width: 50px;" id="shang_page">上一页</li>
+			<li class="fl page_1" id="page_1"></li>
+			<li class="fl page_1" id="page_2"></li>
+			<li class="fl page_1" id="page_3"></li>
+			<li class="fl" style="width: 50px;" id="xia_page">下一页</li>
+			<li class="fl" style="width: 50px;" id="end_page">末页</li>
+			<span>跳转至</span>
+			<input type="text" id="currect"><span>页</span>
+			<span id="sum">共页</span>
+		</ul>
+	</div>
+
+	<!-- 头部搜索 -->
+	<script id="search1" type="text/template">
+		<input class="search_input fl" id="searchId" type="text" />
+    <a href="" target="_black" id="search_a">
+      <div class="search_icon fl" id="search_btn"></div>
+    </a>
+  </script>
+
+	<!-- 新闻导航栏 -->
+	<script id="nav" type="text/template">
+		{{each message}}
+			{{if $value.tpl != '' && $value.type == "article" }}
+				<li><a href={{"/" +$value.id + "/index.html"}} target="_blank">{{$value.catename}}</a></li>
+			{{/if}}
+		{{/each}}
+	</script>
+
+	<!-- 看电视导航栏 -->
+	<script id="nav1" type="text/template">
+		{{each message}}
+			{{if $value.tpl != ''}}
+				<li><a href={{"/" +$value.id + "/index.html"}} target="_blank">{{$value.catename}}</a></li>
+			{{/if}}
+		{{/each}}
+	</script>
+
+	<!-- 新闻广播导航栏 -->
+	<script id="nav2" type="text/template">
+		{{each message}}
+			{{if $value.tpl != ''}}
+				<li><a href={{"/" +$value.id + "/index.html"}} target="_blank">{{$value.catename}}</a></li>
+			{{/if}}
+		{{/each}}
+	</script>
+
+	<!-- 文明实践导航栏 -->
+	<script id="nav3" type="text/template">
+		{{each message}}
+			{{if $value.tpl != ''}}
+				<li><a href={{"/" +$value.id + "/index.html"}} target="_blank">{{$value.catename}}</a></li>
+			{{/if}}
+		{{/each}}
+	</script>
+
+	<!-- 搜索 -->
+	<script id="department" type="text/template">
+		{{if message.infos.length>7}}
+			{{each message.infos.slice(0,7)}}							
+			<dl class="middle_contain_content clear_float">
+				{{if $index < 4}}
+				<dt class="fl"><a href={{$value.url}} title="" target="_blank">
+					{{if $value.thumbnail}}
+						<img src={{$value.thumbnail && $value.thumbnail.length != '' ? $value.thumbnail : '/images/icon_huaban.png'}} />
+					</a>
+						{{else}}
+						<img src= {{$value.poster && $value.poster? $value.thumbnail : '/images/icon_huaban.png'}} /></a>
+					{{/if}}
+				</dt>
+				{{/if}}
+				<dd class="fl mgl10 mgt10">
+					<h3><a href={{$value.url}} title="" target="_blank">{{$value.title}}</a></h3>
+					{{if $value.publish_at}}
+					<p>来源：{{$value.copyfrom}}&nbsp;&nbsp;日期：{{$value.publish_at}}</p>
+					{{else}}
+					<p>来源：&nbsp;&nbsp;日期：{{$value.create_at}}</p>
+					{{/if}}
+				</dd>
+			</dl>
+			{{/each}}
+			{{else}}
+				{{each message.infos}}							
+				<dl class="middle_contain_content clear_float">
+					{{if $index < 4}}
+					<dt class="fl"><a href={{$value.url}} title="" target="_blank">
+						{{if $value.thumbnail}}
+						<img src={{$value.thumbnail && $value.thumbnail.length != '' ? $value.thumbnail : '/images/icon_huaban.png'}} />
+							{{else}}
+							<img src= {{$value.poster && $value.poster? $value.thumbnail : '/images/icon_huaban.png'}} /></a>
+						{{/if}}
+					</dt>
+					{{/if}}
+					<dd class="fl mgl10 mgt10">
+						<h3><a href={{$value.url}} title="" target="_blank">{{$value.title}}</a></h3>
+						{{if $value.publish_at}}
+						<p>来源：{{$value.copyfrom}}&nbsp;&nbsp;日期：{{$value.publish_at}}</p>
+						{{else}}
+						<p>来源：&nbsp;&nbsp;日期：{{$value.create_at}}</p>
+						{{/if}}
+					</dd>
+				</dl>
+				{{/each}}
+		{{/if}}
+	</script>
+
+	<!-- 相关新闻 -->
+	<script id="related" type="text/template">
+		{{if message.infos.length != 0}}
+					<div class="middle_contain_right_title">
+						<ul class="clear_float">
+							<li>
+								<a href="javascript:;" title="" target="_blank">
+									<div class="color"></div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" title="" target="_blank">
+									相关新闻
+								</a>
+							</li>
+						</ul>
+					</div>
+					<ul class="middle_contain_right_ul">
+							<a href={{message.infos[0]._url}} title="" target="_blank">
+								<img src={{message.infos[0].thumbnail ? message.infos[0].thumbnail : '/images/icon_huaban.png' }}>
+							</a>
+						{{if  message.infos.length>3}}
+							{{each message.infos.slice(0,3)}}		
+							<li class="auto_cut">
+								<div class="auto_cut_div">
+									<a href={{$value._url}} title="" target="_blank">{{$value.title}}</a>
+								</div>
+							</li>
+							{{/each}}
+						{{/if}}
+					{{/if}}
+				</ul>
+			</script>
+
+	<!-- 本地新闻  -->
+	<script id="local" type="text/template">
+		{{if message.infos.length != 0}}
+					<div class="middle_contain_right_title clear_float">
+						<ul class="clear_float">
+							<li>
+								<a href="javascript:;" title="" target="_blank">
+									<div class="color"></div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" title="" target="_blank">
+									本地新闻
+								</a>
+							</li>
+						</ul>
+					</div>
+					<ul class="middle_contain_right_ul1 clear_float mgt20">
+						{{if  message.infos.length>4}}
+							{{each message.infos.slice(0,4)}}
+									<li class="auto_cut1 fl mgb5 mgr5">
+										<a href={{$value._url}} title="" target="_blank">
+											<img src={{$value.thumbnail ? $value.thumbnail : '/images/icon_huaban.png'}} />
+										</a>
+										<h6 class="auto_cut1_div">{{$value.title}}</h6>
+									</li>
+							{{/each}}
+							{{else}}
+							{{each message.infos}}
+								<li class="auto_cut1 fl mgb5 mgr5">
+									<a href={{$value._url}} title="" target="_blank">
+										<img src={{$value.thumbnail ? $value.thumbnail : '/images/icon_huaban.png'}} />
+									</a>
+									<h6 class="auto_cut1_div">{{$value.title}}</h6>
+								</li>
+							{{/each}}
+						{{/if}}
+					{{/if}}
+				</ul>
+			</script>
+
+	<!-- 头条新闻  -->
+	<script id="headlines1" type="text/template">
+		{{if message.infos.length != 0}}
+					<div class="middle_contain_right_title clear_float">
+						<ul class="clear_float">
+							<li>
+								<a href="javascript:;" title="" target="_blank">
+									<div class="color"></div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" title="" target="_blank">
+									头条新闻
+								</a>
+							</li>
+						</ul>
+					</div>
+					<ul class="middle_contain_right_ul">
+							<a href={{message.infos[0]._url}} title="" target="_blank">
+								<img src={{message.infos[0].thumbnail ? message.infos[0].thumbnail : '/images/icon_huaban.png'}} />
+							</a>
+						{{if message.infos.length>3}}
+							{{each message.infos.slice(0,3)}}		
+							<li class="auto_cut">
+								<div class="auto_cut_div">
+									<a href={{$value._url}} title="" target="_blank">{{$value.title}}</a>
+								</div>
+							</li>
+							{{/each}}
+						{{/if}}
+					{{/if}}
+				</ul>
+		
+			</script>
+
+	<script>
+		// 栏目id
+		var currectCateId = "<?=$article['cateid']?>";
+
+	</script>
+	<script src="/js/jquery-1.11.1.js"></script>
+	<script src="/js/template-web.js"></script>
+	<script src="/js/tools.js"></script>
+	<script src="/js/getNavList.js"></script>
+	<script src="/js/pagination.js"></script>
+	<script src="/js/list_search.js"></script>
+	<script src="/js/swiper.min.js"></script>
+	<script src="/js/style.js"></script>
+</body>
+
+</html>

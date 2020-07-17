@@ -1,0 +1,1032 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="stylesheet" type="text/css" href="swiper/css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://file.iqilu.com/custom/new/v2016/css/public.css" />
+	<link rel="stylesheet" type="text/css" href="/css/index2.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-shim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/json3/3.3.2/json3.min.js"></script>
+	<title>页面标题</title>
+	<link href="http://vjs.zencdn.net/7.7.6/video-js.css" rel="stylesheet">
+
+	<!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+	<script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+</head>
+
+<body>
+	<div class="background"></div>
+	<!-- logo -->
+	<div class="logo_title_down clear_float">
+		<a href="/" class="fl">
+			<img class="logo" src="/images/图层 78@3x.png" />
+		</a>
+		<div class="search fr" id="search_contain">
+		</div>
+		<div class="download fr">
+			<div class="fl erweima_box">
+				<img class="erweima" src="/images/图层 77@3x.png" />
+			</div>
+			<div class="download_info fl">
+				<p class="download_title">扫描二维码</p>
+				<p class="download_title">下载“知即墨”APP</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- 导航 -->
+	<div class="nav">
+		<div class="nav_list clear_float border_size">
+			<ul class="fl">
+				<li class="nav_item nav_item_active">
+					<a href="" target="_blank">首页</a>
+				</li>
+				<li class="nav_item">
+					<a href="" target="_blank">新闻</a>
+					<ul class="level-nav" id="nav_contain">
+					</ul>
+				</li>
+				<li class="nav_item">
+					<a href="" target="_blank">党建</a>
+					<ul class="level-nav">
+						<li><a href="" target="_blank">导航一</a></li>
+						<li><a href="" target="_blank">导航2</a></li>
+						<li><a href="" target="_blank">导航3</a></li>
+					</ul>
+				</li>
+				<li class="nav_item">
+					<a href="" target="_blank">看电视</a>
+					<ul class="level-nav" id="nav1_contain">
+					</ul>
+				</li>
+				<li class="nav_item">
+					<a href="" target="_blank">听广播</a>
+					<ul class="level-nav">
+						<li><a href="" target="_blank">导航一</a></li>
+						<li><a href="" target="_blank">导航2</a></li>
+						<li><a href="" target="_blank">导航3</a></li>
+					</ul>
+				</li>
+				<li class="nav_item">
+					<a href="" target="_blank">政务</a>
+					<ul class="level-nav">
+						<li><a href="" target="_blank">导航一</a></li>
+						<li><a href="" target="_blank">导航2</a></li>
+						<li><a href="" target="_blank">导航3</a></li>
+					</ul>
+				</li>
+				<li class="nav_item">
+					<a href="" target="_blank">政务号</a>
+					<ul class="level-nav">
+						<li><a href="" target="_blank">导航一</a></li>
+						<li><a href="" target="_blank">导航2</a></li>
+						<li><a href="" target="_blank">导航3</a></li>
+					</ul>
+				</li>
+				<li class="nav_item">
+					<a href="" target="_blank">实践号咨询</a>
+					<ul class="level-nav">
+						<li><a href="" target="_blank">导航一</a></li>
+						<li><a href="" target="_blank">导航2</a></li>
+						<li><a href="" target="_blank">导航3</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+
+	<div class="web_body">
+		<div class="wrapper">
+			<!-- 头条 -->
+			<div class="head_news" id="headlines">
+			</div>
+			<!-- banner -->
+			<div class="banner_wrap clear_float clearfix border_size">
+				<div class="swiper-container banner fl">
+					<div class="swiper-wrapper" id="swiper_wrapper">
+						<div class="swiper-slide">
+						</div>
+						<div class="swiper-slide">
+						</div>
+						<div class="swiper-slide">
+						</div>
+					</div>
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+					<div class="swiper-pagination"></div>
+				</div>
+				<div class="banner_news fl mgl30" id="getArticle">
+				</div>
+			</div>
+			<!-- 公告和广告 -->
+			<div class="notice_adv clear_float"></div>
+
+			<!-- 看电视听广播看报纸 -->
+			<div class="tv_newspaper_radio clear_float border_size">
+
+				<!-- 媒体看及即墨 -->
+				<div class="watch_tv fl border_size" id="media_contain"></div>
+
+				<!-- 在线政务服务 -->
+				<div class="watch_tv fl border_size mgl20" id="online_contain"></div>
+
+				<!-- 墨视频 -->
+				<div class="duan_video fr border_size" id="ink_video_contain"> </div>
+
+				<!-- 四图 -->
+				<div class="web_main_content fl ">
+					<div class="grid-img">
+						<a href="#" target="_blank">
+							<img src="/images/showPart1.png">
+						</a>
+					</div>
+					<div class="grid-img">
+						<a href="#" target="_blank">
+							<img src="/images/showPart2.png">
+						</a>
+					</div>
+					<div class="grid-img">
+						<a href="#" target="_blank">
+							<img src="/images/showPart3.png">
+						</a>
+					</div>
+					<div class="grid-img last-item">
+						<a href="#" target="_blank">
+							<img src="/images/showPart4.png">
+						</a>
+					</div>
+				</div>
+
+				<!-- 民生 -->
+				<div class="minsheng fl mgr20 border_size" id="livelihood_contain"></div>
+
+				<!-- 国内国际 -->
+				<div class="guoneiguoji fr border_size" id="domestic_contain"></div>
+
+				<!-- 电视直播 -->
+				<div class="dianshizhibo fl mgt30 border_size" id="dianshi_contain">
+					<!-- <div class="dianshizhibo_img">
+						<video id="newsTraffic_contain" width="338" height="209" class="video-js  vjs-big-play-centered" poster=""
+							style="width: 100%;height: 100%;">
+							<source src="https://jsylivealone302.iqilu.com/live/jimo_tv01/index.m3u8" type="application/x-mpegURL"
+								id="target">
+						</video>
+						<img src="/images/播放 (8).png" class="dianshizhibo_img1">
+						<img src="/images/img_bottom.png" class="dianshizhibo_img2">
+						<span class="dianshizhibo_img3">即墨综合</span>
+					</div> -->
+				</div>
+
+				<!-- 新闻交通直播 -->
+				<div class="news fl mgt30 mgl20 border_size">
+					<div class="tit clear_float">
+						<h2 class="fl"><a href="" title="" target="_blank">新闻交通广播</a></h2>
+						<a href="" title="" target="_blank">
+							<img src="/images/gengduo-5@2x.png" class="fr mgt5 img_max">
+						</a>
+						<img src="/images/图层 14@2x.png" class="fr img_min">
+					</div>
+					<div id="news_contain">
+					</div>
+				</div>
+
+				<!-- 新即墨 -->
+				<div class="newjimo fr mgt30 mgl20 border_size">
+					<div class="tit clear_float">
+						<h2 class="fl"><a href="" title="" target="_blank">新即墨</a></h2>
+						<a href="" title="" target="_blank">
+							<img src="/images/gengduo-5@2x.png" class="fr mgt5 img_max">
+						</a>
+						<img src="/images/图层 14@2x.png" class="fr img_min">
+					</div>
+					<div class="trisection_cnt paper_content clearfix mgt30">
+						<div class="fl">
+							<a href="http://" target="_blank"><img class="left_float paper_pic"
+									src="http://file.iqilu.com/custom/new/images/_pic_test.jpg" alt="" style="display: none;"></a>
+							<a href="http://" target="_blank"><img class="left_float paper_pic js-hidden"
+									src="http://file.iqilu.com/custom/new/images/_pic_test1.jpg" alt="" style="display: none;"></a>
+							<a href="http://" target="_blank"><img class="left_float paper_pic js-hidden"
+									src="http://file.iqilu.com/custom/new/images/_pic_test2.jpg" alt="" style="display: none;"></a>
+							<a href="http://" target="_blank"><img class="left_float paper_pic js-hidden"
+									src="http://file.iqilu.com/custom/new/images/_pic_test3.jpg" alt="" style="display: block;"></a>
+							<a href="http://" target="_blank"><img class="left_float paper_pic js-hidden"
+									src="http://file.iqilu.com/custom/new/images/_pic_test4.jpg" alt="" style="display: none;"></a>
+						</div>
+						<div class="fr paper_date_box mgr20">
+							<div class="one_date active_paper">
+								<p>2019-09-10 第五期</p>
+								<div class="triangle1"></div>
+							</div>
+							<div class="one_date">
+								<p>2019-08-10 第四期</p>
+								<div class="triangle1"></div>
+							</div>
+							<div class="one_date">
+								<p>2019-07-10 第三期</p>
+								<div class="triangle1"></div>
+							</div>
+							<div class="one_date">
+								<p>2019-06-10 第二期</p>
+								<div class="triangle1"></div>
+							</div>
+							<div class="one_date last_item">
+								<p>2019-05-10 第一期</p>
+								<div class="triangle1"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 随手拍 -->
+				<div class="suishoupai fl border_size mgt30">
+					<div class="tit clear_float">
+						<h2 class="fl"><a href="" title="" target="_blank">随手拍</a></h2>
+						<a href="./demo_video.html" title="" target="_blank">
+							<img src="/images/gengduo-5@2x.png" class="fr mgt5 img_max">
+						</a>
+						<img src="/images/图层 14 拷贝 7@2x.png" class="fr mgl30 img_min">
+					</div>
+					<ul class="clear_float" id="shoot_contain">
+					</ul>
+				</div>
+
+				<!-- 直播 -->
+				<div class="zhibo fr mgt30 border_size" id="now_video_contain"></div>
+
+				<!-- 最新问政 -->
+				<div class="tabitem3 fl mgt30 border_size">
+					<ul class="clear_float">
+						<li class="tabitem3_ul tabitem3_active fl"><a href="" title="">
+								<div class="triangle"></div>
+							</a>最新问政</a></li>
+						<li class="tabitem3_ul fl"><a href="" title="">
+								<div class="triangle"></div>
+								部门列表
+							</a>
+						</li>
+						<li class="tabitem3_ul fl"><a href="" title="">
+								<div class="triangle"></div>满意排行
+							</a></li>
+						<li class="tabitem3_ul fl"><a href="" title="">
+								<div class="triangle"></div>回复排行
+							</a></li>
+						<a href="" title="" target="_blank"><img src="/images/banner@2x.png" class="fr mgr30"></a>
+					</ul>
+					<ul class="pic mgt30" style="display: block;" id="latest_question_contain">
+					</ul>
+					<ul class="pic mgt30" style="display: none;" id="department_contain">
+					</ul>
+					<ul class="pic mgt30" style="display: none;" id="satisfaction_contain">
+					</ul>
+					<ul class="pic mgt30" style="display: none;" id="reply_contain">
+					</ul>
+				</div>
+
+				<!--政务号  -->
+				<div class="zhengwuhao fr border_size" id="government_number_contain"></div>
+
+				<!-- 掌上生活 -->
+				<div class="shou_life fl mgt30 border_size">
+					<div class="tit clear_float">
+						<h2 class="fl"><a href="" title="" target="_blank">掌上生活</a></h2>
+						<img src="/images/图层 14 拷贝 18@2x.png" class="fl mgl30">
+					</div>
+					<div class="clear_float" id="life_number_contain">
+					</div>
+
+				</div>
+
+				<!-- 图说即墨 -->
+				<div class="web_botton fl mgt30 border_size">
+					<div class="tit clear_float">
+						<h2 class="fl"><a href="" title="" target="_blank">图说即墨</a></h2>
+						<a href="" title="" target="_blank">
+							<img src="/images/gengduo-5@2x.png" class="fr mgt5 img_max">
+						</a>
+						<img src="/images/图层 14 拷贝 18@2x.png" class="fr img_min">
+					</div>
+					<a href=""><img class="web_botton_img fl" src="/images/icon_tushojimo1.png" alt=""></a>
+					<a href=""><img class="web_botton_img fl" src="/images/icon_tushuojimo2.png" alt=""></a>
+					<a href=""><img class="web_botton_img fl" src="/images/icon_tushuojimo3.png" alt=""></a>
+					<a href=""><img class="web_botton_img fl" src="/images/icon_tushuojimo4.png" alt=""></a>
+				</div>
+				</ul>
+			</div>
+		</div>
+
+		<!-- 底部 -->
+		<div class="web-footer">
+			<div class="web-footer_middle">
+				<div class="fl">
+					<p class="copyright">
+						版权所有 宣传部<br>
+					</p>
+					<p>地址：中国山东即墨 邮箱：邮编：261500</p>
+					<div>
+						<img src="/images/img_bottom.png" class="img_botton1 fl mgt10 mgr10">
+						<p>
+							网站备案：鲁ICP备12001877号
+						</p>
+					</div>
+				</div>
+				<div class="fr">
+					<dl>
+						<dt class="fl">
+							<img src="/images/icon_erweima.png" alt="" />
+						</dt>
+						<dd class="fl">扫二维码下载</br>"知即墨"APP</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+
+		<!-- 新闻导航栏 -->
+		<script id="nav" type="text/template">
+			{{each message}}
+				<li><a href={{"./demo_pic_list.html?cateid=" + $value.id}} target="_blank">{{$value.catename}}</a></li>
+			{{/each}}
+		</script>
+
+		<!-- 看电视导航栏 -->
+		<script id="nav1" type="text/template">
+			{{each message}}
+				<li><a href={{"./demo_video.html?cateid="+$value.id}} target="_blank">{{$value.catename}}</a></li>
+			{{/each}}
+		</script>
+
+		<!-- 头条文稿 -->
+		<script id="headerGetArticle1" type="text/template">
+			{{if message.infos.length>3}}
+					<h1 class="head_title">
+						<div class="span11 fl">头条&nbsp;</div>
+						<div class="fl mgb15 mgl20"><a href={{"./demo_news_details.html?id=" + message.infos[0].id}} target="_blank">{{message.infos[0].title}}</a></div>
+					</h1>
+					<div class="head_list mgt5">
+						<ul>
+							{{each message.infos.slice(1,4)}}
+							<li class="head_list_item">
+								<a href={{"./demo_news_details.html?id=" + $value.id}} target="_blank">
+									{{$value.title}}
+								</a>
+							</li>
+							{{/each}}
+						</ul>
+					</div>
+			{{else}}
+					{{each message.infos}}
+					<h1 class="head_title">
+						<div class="span11 fl">头条&nbsp;</div>
+						<div class="fl mgb15 mgl20"><a href={{"./demo_news_details.html?id=" + message.infos[0].id}} target="_blank">{{message.infos[0].title}}</a></div>
+					</h1>
+					<div class="head_list mgt5">
+						<ul>
+							{{each message.infos}}
+							<li class="head_list_item">
+								<a href={{"./demo_news_details.html?id=" + $value.id}} target="_blank">
+									{{$value.title}}
+								</a>
+							</li>
+							{{/each}}
+						</ul>
+					</div>
+					{{/each}}
+			{{/if}}
+		</script>
+
+		<!-- 头部文稿 -->
+		<script id="headerGetArticle" type="text/template">
+			{{if message.infos.length>6}}
+					<h3 class="mgt10"><a href={{"./demo_news_details.html?id=" + message.infos[0].id}}>{{message.infos[0].title}}</a></h3>
+					<h4 class="mgt10 color">
+						<a href={{message.infos[0].url}}>{{message.infos[0].desc}}</a>
+					</h4>
+					<hr class="mgt20 hr" />		
+					<ul>
+						{{each message.infos.slice(1,7)}}
+						<li class="banner_news_item">
+							<i class="fl"></i>
+							<div class="banner_news_item_div">
+								<a href={{"./demo_news_details.html?id=" + $value.id}} target="_blank" class="fl">
+									{{$value.title}}
+								</a>
+							</div>
+							<span class="fr banner_news_item_date">
+								{{$value.publish_at}}
+							</span>
+						</li>
+						{{/each}}
+					</ul>					
+					<li class="banner_news_item">
+						<span class="fr gengduo">
+							<a href={{ "./demo_pic_list.html?flag=1" }} target="_blank">查看更多
+						</span>
+					</li>
+				{{else}}
+				<h3 class="mgt10"><a href={{"./demo_news_details.html?id=" + message.infos[0].id}}>{{message.infos[0].title}}</a></h3>
+					<h4 class="mgt10 color">
+						<a href={{message.infos[0].url}}>{{message.infos[0].desc}}</a>
+					</h4>
+					<hr class="mgt20 hr" />		
+					<ul>
+						{{each message.infos.slice(1,7)}}
+						<li class="banner_news_item">
+							<i class="fl"></i>
+							<div class="banner_news_item_div">
+								<a href={{"./demo_news_details.html?id=" + $value.id}} target="_blank" class="fl">
+									{{$value.title}}
+								</a>
+							</div>
+							<span class="fr banner_news_item_date">
+								{{$value.publish_at}}
+							</span>
+						</li>
+						{{/each}}
+					</ul>					
+					<li class="banner_news_item">
+						<span class="fr gengduo">
+							<a href={{ "./demo_pic_list.html?flag=1" }} target="_blank">查看更多
+						</span>
+					</li>
+				{{/if}}
+		</script>
+
+		<!--幻灯片  -->
+		<script id="slides" type="text/template">
+			{{each message}}
+				<div class="swiper-slide">
+					<img class="banner_item" src={{$value.image}} />
+					<p class="banner_item_desc">{{ $value.title }}</p>
+				</div>
+			{{/each}}
+		</script>
+
+		<!-- 媒体看即墨  -->
+		<script id="media" type="text/template">
+			<div class="tit clear_float">
+				<h2 class="fl"><a href="" title="" target="_blank">媒体看即墨</a></h2>
+				<a href={{"./demo_pic_list.html?cateid=" + message.infos[0].cateid}} title="" target="_blank">
+					<img src="/images/gengduo-5@2x.png" class="fr mgt5 img_max">
+				</a>
+				<img src="/images/图层 14@2x.png" class="fr img_min">
+			</div>
+			{{if message.infos.length>6}}
+				<ul class="mgt20 border_size">
+				{{each message.infos.slice(0,6)}}
+					<li><a href={{"./demo_news_details.html?id=" + $value.id + '&cateid='+ $value.cateid}} title="" target="_blank">{{$value.title}}</a></li>
+				{{/each}}
+			</ul>
+				{{else}}
+				<div class="tit clear_float">
+					<h2 class="fl"><a href="" title="" target="_blank">媒体看即墨</a></h2>
+					<a href={{"./demo_pic_list.html?cateid=" + message.infos[0].cateid}} title="" target="_blank">
+						<img src="/images/gengduo-5@2x.png" class="fr mgt5 img_max">
+					</a>
+					<img src="/images/图层 14@2x.png" class="fr img_min">
+				</div>
+					<ul class="mgt20 border_size">
+					{{each message.infos}}
+						<li><a href={{"./demo_news_details.html?id=" + $value.id + '&cateid='+ $value.cateid}} title="" target="_blank">{{$value.title}}</a></li>
+					{{/each}}
+					</u>
+			{{/if}}
+		</script>
+
+		<!-- 在线政务服务  -->
+		<script id="online" type="text/template">
+			<div class="tit clear_float">
+				<h2 class="fl"><a href="" title="" target="_blank">在线政务服务</a></h2>
+				<a href={{"./demo_pic_list.html?cateid=15939"}} title="" target="_blank">
+					<img src="/images/gengduo-5@2x.png" class="fr mgt5 img_max">
+				</a>
+				<img src="/images/图层 14@2x.png" class="fr img_min">
+			</div>
+			{{if message.infos.length>6}}
+			<ul class="mgt20 border_size" >	
+				{{each message.infos.slice(0,6)}}
+					<li><a href={{"./demo_news_details.html?id=" + $value.id + '&cateid='+ $value.cateid}} title="" target="_blank">{{$value.title}}</a></li>
+				{{/each}}
+			</ul>
+			{{else}}
+			<ul class="mgt20 border_size" >	
+				{{each message.infos.slice(0,6)}}
+					<li><a href={{"./demo_news_details.html?id=" + $value.id + '&cateid='+ $value.cateid}} title="" target="_blank">{{$value.title}}</a></li>
+				{{/each}}
+			</ul>
+			{{/if}}
+		</script>
+
+		<!-- 墨视频 -->
+		<script id="ink_video" type="text/template">
+			<div class="tit clear_float">
+				<h2 class="fl"><a href="" title="" target="_blank">墨视频</a></h2>
+				<a href={{"./demo_pic_list.html?cateid=" + message.infos[1].cateid}} title="" target="_blank">
+					<img src="/images/gengduo-5@2x.png" class="fr mgt5 img_max">
+				</a>
+				<img src="/images/图层 14@2x.png" class="fr img_min">
+			</div>
+			{{if message.infos.length>2}}
+				{{each message.infos.slice(1,3)}}
+					<div class="cell">
+						<div class="cell_img">
+							<a href={{"./demo_news_details.html?id=" + $value.id + '&cateid='+ $value.cateid}} target="_blank">
+								<img src={{$value.thumbnail}}>
+								<img src="/images/播放 (8).png" style="width: 40px;height: 40px;" class="cell_img_img">
+							</a>
+						</div>
+						<div class="cell_main">
+							<div class="cell_main_title">
+								<a href={{"./demo_news_details.html?id=" + $value.id + '&cateid='+ $value.cateid}} target="_blank">
+									{{$value.title}}
+								</a>
+							</div>
+							<div class="cell_main_info">
+								<span class="cell_main_info_item">{{$value.publish_at}}</span>
+							</div>
+						</div>
+					</div>
+				{{/each}}
+			{{else}}
+				{{each message.infos}}
+				<div class="cell">
+					<div class="cell_img">
+						<a href={{"./demo_news_details.html?id=" + $value.id + '&cateid='+ $value.cateid}} target="_blank">
+							<img src={{$value.thumbnail}}>
+							<img src="/images/播放 (8).png" style="width: 40px;height: 40px;" class="cell_img_img">
+						</a>
+					</div>
+					<div class="cell_main">
+						<div class="cell_main_title">
+							<a href={{"./demo_news_details.html?id=" + $value.id + '&cateid='+ $value.cateid}} target="_blank">
+								{{$value.title}}
+							</a>
+						</div>
+						<div class="cell_main_info">
+							<span class="cell_main_info_item">{{$value.publish_at}}</span>
+						</div>
+					</div>
+				</div>
+				{{/each}}
+			{{/if}}
+		</script>
+
+		<!-- 民生 -->
+		<script id="livelihood" type="text/template">
+			<div class="tit clear_float">
+				<h2 class="fl"><a href="" title="" target="_blank">民生</a></h2>
+				<a href={{"./demo_pic_list.html?cateid=" + message.infos[1].cateid}} title="" target="_blank">
+					<img src="/images/gengduo-5@2x.png" class="fr mgt5 img_max">
+				</a>
+				<img src="/images/图层 14 拷贝 7@2x.png" class="fr mgl30 img_min">
+			</div>
+			{{if message.infos.length>3}}
+				{{each message.infos.slice(1,4)}}
+					<div class="cell">
+						<div class="cell_img">
+							<a href={{"./demo_news_details.html?id=" + $value.id + '&cateid='+ $value.cateid}} target="_blank">
+								<img src={{$value.thumbnail}}>
+							</a>
+						</div>
+						<div class="cell_main">
+							<div class="cell_main_title1">
+								<a href={{"./demo_news_details.html?id=" + $value.id + '&cateid='+ $value.cateid}} target="_blank">
+									{{$value.title}}
+								</a>
+							</div>
+							<div class="cell_main_info">
+								<span class="cell_main_info_item">{{$value.publish_at}}</span>
+							</div>
+						</div>
+					</div>
+				{{/each}}
+			{{else}}
+				{{each message.infos}}
+				<div class="cell">
+					<div class="cell_img">
+						<a href={{"./demo_news_details.html?id=" + $value.id + '&cateid='+ $value.cateid}} target="_blank">
+							<img src={{$value.thumbnail}}>
+						</a>
+					</div>
+					<div class="cell_main">
+						<div class="cell_main_title1">
+							<a href={{"./demo_news_details.html?id=" + $value.id + '&cateid='+ $value.cateid}} target="_blank">
+								{{$value.title}}
+							</a>
+						</div>
+						<div class="cell_main_info">
+							<span class="cell_main_info_item">{{$value.publish_at}}</span>
+						</div>
+					</div>
+				</div>
+				{{/each}}
+			{{/if}}
+		</script>
+
+		<!-- 国内国际 -->
+		<script id="domestic" type="text/template">
+			<div class="tit clear_float">
+				<h2 class="fl"><a href="" title="" target="_blank">国内国际</a></h2>
+				<a href={{"./demo_pic_list.html?cateid=" + message.infos[0].cateid}}  title="" target="_blank">
+					<img src="/images/gengduo-5@2x.png" class="fr mgt5 img_max">
+				</a>
+				<img src="/images/图层 14@2x.png" class="fr img_min">
+			</div>
+			{{if message.infos.length>1}}
+			<a href={{"./demo_news_details.html?id=" + message.infos[0].id + '&cateid='+ message.infos[0].cateid}} target="_blank">
+				<h3>
+					{{message.infos[0].title}}
+				</h3>
+			</a>
+				<div class="guoneiguoji_img"><img src={{message.infos[0].thumbnail}}></div>
+				<ul class="mgt20">
+				{{each message.infos.slice(1,3)}}							
+						<li class="clear_float">
+							<i></i>
+							<a href={{"./demo_news_details.html?id=" + $value.id + '&cateid='+ $value.cateid}} title="" target="_blank" class="fl">{{$value.title}}</a>
+						</li>		
+				{{/each}}
+			</ul>
+			{{/if}}
+		</script>
+
+		<!-- 随手拍 -->
+		<script id="shoot" type="text/template">
+			{{if message.infos.length>8}}
+				{{each message.infos.slice(0,8)}}							
+					<li class="fl">
+						<div class="suishoupai_div">
+							<a href={{$value.share.url}} title="" target="_blank">
+								<img class="imgs1" src="http://file.iqilu.com/custom/new/images/_pic_test3.jpg" alt="">
+								<img src="/images/播放 (8).png" class="imgs2">
+								<p>{{$value.title}}</p>
+							</a>
+						</div>
+					</li>		
+				{{/each}}
+			</ul>
+			{{else}}
+				{{each message.infos}}
+					<li class="fl">
+						<div class="suishoupai_div">
+							<a href={{$value.share.url}} title={{$value.addr}} target="_blank">
+								<img class="imgs1" src={{$value.share.image}} alt="">
+								<img src="/images/播放 (8).png" class="imgs2">
+								<p>{{$value.title}}</p>
+							</a>
+						</div>
+					</li>		
+				{{/each}}
+			{{/if}}
+		</script>
+
+		<!-- 直播 -->
+		<script id="now_video" type="text/template">
+			<div class="tit clear_float">
+				<h2 class="fl"><a href="" title="" target="_blank">直播</a></h2>
+				<a href={{"./demo_pic_list.html?type=" + message.infos[1].opentype}} title="" target="_blank">
+					<img src="/images/gengduo-5@2x.png" class="fr mgt5 img_max">
+				</a>
+				<img src="/images/图层 14@2x.png" class="fr img_min">
+			</div>
+			{{if message.infos.length>1}}
+			<a href={{"./demo_news_details.html?id=" + message.infos[1].id + '&cateid='+ message.infos[1].cateid}} title="" target="_blank">
+				<h3>
+					{{message.infos[1].title}}
+				</h3>
+			</a>
+				<div class="guoneiguoji_img">
+					<img src={{message.infos[1].poster}}>
+					<img src="/images/zhibozhong-icon.png" class="zhibozhong">
+				</div>	
+				<a href={{"./demo_news_details.html?id=" + message.infos[1].id + '&cateid='+ message.infos[1].cateid}} title="" target="_blank">	
+				<p>
+					{{message.infos[1].title}}
+				</p>
+			</a>
+				<ul class="mgt20">
+				{{each message.infos.slice(1,3)}}							
+						<li class="clear_float">
+							<i></i>
+							<a href={{"./demo_news_details.html?id=" + $value.id + '&cateid='+ $value.cateid}} title="" target="_blank" class="fl">{{$value.title}}</a>
+						</li>		
+				{{/each}}
+			</ul>
+			{{/if}}
+		</script>
+
+		<!-- 最新问政 -->
+		<script id="latest_question" type="text/template">
+			{{if message.infos.length>6}}
+				{{each message.infos.slice(0,6)}}							
+					<li class="tabitem4_ul">
+						<a>{{$value.body}}
+						</a>
+						<img src="/images/gengduo-icon.png" class="gengduo_icon1">
+						<img src="/images/gengduo-icon2.png" class="gengduo_icon2">
+						<div class="pic_content">
+							<a href="">{{$value.reply}}
+							</a>
+						</div>
+					</li>
+				{{/each}}
+			{{else}}
+				{{each message.infos}}							
+					<li class="tabitem4_ul">
+						<a>{{$value.body}}
+						</a>
+						<img src="/images/gengduo-icon.png" class="gengduo_icon1">
+						<img src="/images/gengduo-icon2.png" class="gengduo_icon2">
+						<div class="pic_content">
+							<a href="">{{$value.reply}}
+							</a>
+						</div>
+					</li>
+				{{/each}}
+			{{/if}}
+		</script>
+
+		<!-- 部门列表 -->
+		<script id="department" type="text/template">
+			{{if message.length>6}}
+				{{each message.slice(0,7)}}							
+					<li class="tabitem4_ul">
+						<a>{{$value.department}}
+						</a>
+						<!-- <img src="/images/gengduo-icon.png" class="gengduo_icon1">
+						<img src="/images/gengduo-icon2.png" class="gengduo_icon2"> -->
+						<!-- <div class="pic_content">
+							<a href="">
+							</a>
+						</div> -->
+					</li>
+				{{/each}}
+			{{else}}
+				{{each message}}							
+					<li class="tabitem4_ul">
+						<a>{{$value.department}}
+						</a>
+						<!-- <img src="/images/gengduo-icon.png" class="gengduo_icon1">
+						<img src="/images/gengduo-icon2.png" class="gengduo_icon2"> -->
+						<!-- <div class="pic_content">
+							<a href="">
+							</a>
+						</div> -->
+					</li>
+				{{/each}}
+			{{/if}}
+		</script>
+
+		<!-- 满意排行 -->
+		<script id="satisfaction" type="text/template">
+			{{if message.length>6}}
+				{{each message.slice(0,7)}}							
+					<li class="tabitem4_ul">
+						<a>{{$value.department}}
+						</a>
+						<!-- <img src="/images/gengduo-icon.png" class="gengduo_icon1">
+						<img src="/images/gengduo-icon2.png" class="gengduo_icon2">
+						<div class="pic_content">
+							<a href="">{{$value.reply}}
+							</a>
+						</div> -->
+					</li>
+				{{/each}}
+			{{else}}
+				{{each message}}							
+					<li class="tabitem4_ul">
+						<a>{{$value.department}}
+						</a>
+						<!-- <img src="/images/gengduo-icon.png" class="gengduo_icon1">
+						<img src="/images/gengduo-icon2.png" class="gengduo_icon2">
+						<div class="pic_content">
+							<a href="">
+							</a>
+						</div> -->
+					</li>
+				{{/each}}
+			{{/if}}
+		</script>
+
+		<!-- 回复排行 -->
+		<script id="reply" type="text/template">
+			{{if message.length>6}}
+				{{each message.slice(0,7)}}							
+					<li class="tabitem4_ul">
+						<a>{{$value.department}}
+						</a>
+						<!-- <img src="/images/gengduo-icon.png" class="gengduo_icon1">
+						<img src="/images/gengduo-icon2.png" class="gengduo_icon2">
+						<div class="pic_content">
+							<a href="">{{$value.reply}}
+							</a>
+						</div> -->
+					</li>
+				{{/each}}
+			{{else}}
+				{{each message}}							
+					<li class="tabitem4_ul">
+						<a>{{$value.department}}
+						</a>
+						<!-- <img src="/images/gengduo-icon.png" class="gengduo_icon1">
+						<img src="/images/gengduo-icon2.png" class="gengduo_icon2">
+						<div class="pic_content">
+							<a href="">
+							</a>
+						</div> -->
+					</li>
+				{{/each}}
+			{{/if}}
+		</script>
+
+		<!-- 政务号 -->
+		<script id="government_number" type="text/template">
+			<div class="tit clear_float">
+				<h2 class="fl"><a href="" title="" target="_blank">政务号</a></h2>
+				<a href={{"./demo_pic_list.html?type=govnum&cateid=" + message.articleList[0].cateid}} title="" target="_blank">
+					<img src="/images/gengduo-5@2x.png" class="fr mgt5 img_max">
+				</a>
+				<img src="/images/图层 14@2x.png" class="fr img_min">
+			</div>
+			{{if message.articleList.length>3}}
+				{{each message.articleList.slice(0,3)}}							
+					<div class="cell">
+						<div class="cell_img">
+							<a href={{"./demo_news_details.html?id=" + $value.id + '&cateid='+ $value.cateid}} target="_blank">
+								<img src={{$value.thumbnail}} class="cell_img_1">
+								<img src="/images/播放 (8).png" style="width: 40px;height: 40px;" class="cell_img_img">
+							</a>
+						</div>
+						<div class="cell_main">
+							<div class="cell_main_title">
+								<a href={{"./demo_news_details.html?id=" + $value.id + '&cateid='+ $value.cateid}} target="_blank">
+									{{$value.title}}
+								</a>
+							</div>
+							<div class="cell_main_info">
+								<span class="cell_main_info_item">{{$value.department}}</span>
+								<span class="cell_main_info_item">{{$value.publish_at}}</span>
+							</div>
+						</div>
+					</div>
+				{{/each}}
+			{{else}}
+				{{each message.articleList}}							
+				<div class="cell">
+					<div class="cell_img">
+						<a href={{"./demo_news_details.html?id=" + $value.id + '&cateid='+ $value.cateid}} target="_blank">
+							<img src={{$value.thumbnail}} class="cell_img_1">
+							<img src="/images/播放 (8).png" style="width: 40px;height: 40px;" class="cell_img_img">
+						</a>
+					</div>
+					<div class="cell_main">
+						<div class="cell_main_title">
+							<a href={{"./demo_news_details.html?id=" + $value.id + '&cateid='+ $value.cateid}} target="_blank">
+								{{$value.title}}
+							</a>
+						</div>
+						<div class="cell_main_info">
+							<span class="cell_main_info_item">{{$value.department}}</span>
+							<span class="cell_main_info_item">{{$value.publish_at}}</span>
+						</div>
+					</div>
+				</div>
+				{{/each}}
+			{{/if}}
+		</script>
+
+		<!-- 电视直播1 -->
+		<script id="my-video" type="text/template">
+			<div class="tit clear_float">
+				<h2 class="fl"><a href="" title="" target="_blank">电视直播</a></h2>
+				<a href="" title="" target="_blank">
+					<img src="/images/gengduo-5@2x.png" class="fr mgt5 img_max">
+				</a>
+				<img src="/images/图层 14@2x.png" class="fr img_min">
+			</div>
+			<ul class="mgt20">
+			{{if message.length>3}}
+				{{each message.slice(0,3)}}							
+					<li class="dianshi_li">
+						<span class="dianshi_span">{{$value.name}}</span><span>|</span>
+					</li>
+				{{/each}}
+			</ul>
+				<div class="dianshizhibo_img">
+					<video id="newsTraffic_contain" width="338" height="209" class="video-js  vjs-big-play-centered" poster=""
+						style="width: 100%;height: 100%;">
+						<source src='' type="application/x-mpegURL"
+							id="target">
+					</video>
+				</div>
+				<div class="dianshizhibo_img">
+					<video id="newsTraffic_contain1" width="338" height="209" class="video-js  vjs-big-play-centered" poster=""
+						style="width: 100%;height: 100%;">
+						<source src='' type="application/x-mpegURL"
+							id="target">
+					</video>
+				</div>
+				<div class="dianshizhibo_img">
+					<video id="newsTraffic_contain2" width="338" height="209" class="video-js  vjs-big-play-centered" poster=""
+						style="width: 100%;height: 100%;">
+						<source src='' type="application/x-mpegURL"
+							id="target">
+					</video>
+				</div>
+			<!-- {{else}}
+			<ul class="mgt20">
+					{{each message}}							
+						<li>
+							<span class="dianshi_span">{{$value.name}}</span><span>|</span>
+						</li>
+					{{/each}}
+			</ul> -->
+			{{/if}}		
+		</script>
+
+		<!-- 新闻交通广播 -->
+		<script id="news" type="text/template">
+			{{if message.infos.length>2}}
+			{{each message.infos.slice(1,3)}}
+			<div class="cell">
+				<div class="cell_img">
+					<a href="#" target="_blank">
+						<img src="http://file.iqilu.com/custom/new/images/_pic_test.jpg">
+					</a>
+					<img src="/images/播放 (8).png" class="icon" style="width: 40px;height: 40px;">
+				</div>
+				<div class="cell_main">
+					<div class="cell_main_title">
+						<a href="#" target="_blank">
+							{{$value.title}}
+						</a>
+					</div>
+					<div class="cell_main_info">
+						<p class="">播出时间</p>
+						<div class="mgt15">
+							{{if false}}
+							<span class="cell_main_info_item active">正在直播</span>
+							{{/if}}
+							<span>{{$value.publish_at}}</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			{{/each}}
+			{{/if}}		
+		</script>
+
+		<!-- 掌上生活 -->
+		<script id="life" type="text/template">
+			<img class="shou_life_img1 fl mgl10 mgt20" src="/images/icon_jimo.png" alt="">
+			{{if message[1].items.length>16}}
+			<ul class="fl">
+				{{each message[1].items.slice(0,16)}}					
+					<li class="color1">
+						<a href={{$value.url}} title="" target="_blank">
+							<div>
+								<img src={{$value.thumb}}>
+								<h5>{{$value.title}}</h5>
+							</div>
+						</a>
+					</li>				
+				{{/each}}
+			</ul>
+			{{else}}
+			<ul class="fl">
+				{{each message[1].items.slice(0,16)}}					
+					<li class="color1">
+						<a href={{$value.url}} title="" target="_blank">
+							<div>
+								<img src={{$value.thumb}}>
+								<h5>{{$value.title}}</h5>
+							</div>
+						</a>
+					</li>				
+				{{/each}}
+			</ul>
+			{{/if}}
+		</script>
+
+		<!-- 头部搜索 -->
+		<script id="search1" type="text/template">
+			<input class="search_input fl" id="searchId" type="text" />
+			<a href="" target="_black" id="search_a">
+				<div class="search_icon fl" id="search_btn"></div>
+			</a>
+		</script>
+
+		<script src="/js/jquery-1.11.1.js"></script>
+		<script src="./node_modules/art-template/lib/template-web.js"></script>
+		<script src="/js/index2.js"></script>
+		<script src="./swiper/js/swiper.min.js"></script>
+		<script src="https://vjs.zencdn.net/7.7.6/video.js"></script>
+		<script src="/js/style.js"></script>
+</body>
+
+</html>

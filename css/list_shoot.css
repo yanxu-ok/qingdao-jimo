@@ -1,0 +1,187 @@
+.auto_cut {
+  width: auto;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/**网站顶部*/
+.logo_title_down {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.background1 {
+  width: 914px;
+  height: 110px;
+  background-image: url(../images/icon_header.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 16px;
+  left: 151px;
+  z-index: -10;
+}
+
+.download {
+  width: auto;
+  height: auto;
+  float: right;
+  margin-right: 10px;
+}
+
+.erweima {
+  width: 62px;
+  height: 62px;
+  margin-right: 10px;
+}
+
+.download_info {
+  margin-top: 10px;
+}
+
+.download_title {
+  font-size: 14px;
+  color: #0068B7;
+  font-family: Microsoft YaHei;
+  font-weight: bold;
+  margin: 0 5px;
+}
+
+.background {
+  background: #0068B7;
+  color: white;
+  border: 1px solid #0068B7;
+}
+
+
+/**搜索框*/
+.search {
+  width: 208px;
+  height: 26px;
+  margin-top: 40px;
+  background-color: #ffffff;
+  border-radius: 13px;
+}
+
+.download {
+  margin-top: 25px;
+  margin-right: 50px;
+}
+
+.search_input {
+  width: 90%;
+  height: 26px;
+  background-color: #ffffff;
+  border-radius: 13px;
+  outline: none;
+  text-indent: 10px;
+  border: 1px solid #D5D5D5;
+}
+
+.search_icon {
+  width: 16px;
+  height: 26px;
+  margin: 5px 0 -10px -26px;
+  background-image: url("../images/sousuo.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.web_body {
+  background-color: #F5F5F5;
+}
+
+.wrapper {
+  width: 1200px;
+  padding-bottom: 50px;
+}
+
+/* 中间 左侧 */
+.middle_contain {
+  width: 1200px;
+  margin: 20px auto;
+  box-sizing: border-box;
+}
+
+.middle_contain_left {
+  width: 850px;
+  height: auto;
+  box-sizing: border-box;
+}
+
+.img_small_contain img {
+  width: 160px;
+  height: 265px;
+}
+
+.img_small_contain {
+  margin-bottom: 23px;
+  position: relative;
+  margin-right: 5px;
+  width: 164px;
+  height: 268px;
+}
+
+.img_small_contain_title {
+  width: 130px;
+  color: white;
+  font-size: 14px;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  position: absolute;
+  bottom: 28px;
+  left: 16px;
+  overflow: hidden;
+  display: none;
+}
+
+.img_small_contain .img_small_contain_img {
+  width: 39px;
+  height: 41px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.img_small_contain_img {
+  opacity: 0.5;
+}
+
+/* 分页 */
+.pagination_contain {
+  margin-top: 67px;
+}
+
+.pagination_contain ul {
+  width: 600px;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.pagination_contain ul span {
+  font-size: 14px;
+  line-height: 30px;
+  margin-left: 10px;
+}
+
+.pagination_contain ul input {
+  width: 30px;
+  height: 30px;
+  border: #0068B7 solid 1px;
+}
+
+.pagination_contain ul li {
+  height: 30px;
+  width: 30px;
+  border: solid 1px #0068B7;
+  text-align: center;
+  font-size: 14px;
+  line-height: 30px;
+  margin-left: 10px;
+}
